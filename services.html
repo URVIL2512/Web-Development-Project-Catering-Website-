@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Pyramid Caterers</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="pyramid.jpg" class="logo">
+            <h1>Pyramid Caterers</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.css">Login</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Exquisite Catering Services</h2>
+            <p>Your event, our passion.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+        </div>
+    </section>
+
+    <section class="online-order">
+        <div class="container">
+            <h2>Online book our Caterers for Your Function - Fill This Form</h2>
+            <form id="orderForm" action="#" method="POST" onsubmit="return validateForm()">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="street" name="street" placeholder="Street address" required>
+                <input type="text" id="city" name="city" placeholder="City" required>
+                <input type="text" id="state" name="state" placeholder="State" required>
+                <input type="text" id="pin" name="pin" placeholder="PIN code" required>
+
+                <label for="orderDetails">Order Details:</label>
+                <textarea id="orderDetails" name="orderDetails" placeholder="Describe your order here and also specify the date for your event" rows="4" required></textarea>
+
+                <button type="submit" id="submitOrder">Submit Order</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pyramid Caterers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('fullName').value;
+            if (!/^[a-zA-Z\s]+$/.test(name)) {
+                alert("Please enter a valid name (letters and spaces only).");
+                return false;
+            }
+
+            var email = document.getElementById('email').value;
+            if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            var phoneNo = document.getElementById('phone').value;
+            if (!/^\d{10}$/.test(phoneNo)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+
+            return true;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("submitOrder").addEventListener("click", function(event) {
+                event.preventDefault();
+                if (validateForm()) {
+                    alert("Order successfully submitted!");
+                    document.getElementById("orderForm").submit();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

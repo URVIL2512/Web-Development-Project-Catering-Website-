@@ -1,0 +1,22 @@
+[
+    {
+        "customerName": "Alice Johnson",
+        "customerEmail": "alice@example.com",
+        "customerPhone": "9876543210",
+        "orderedDish": "Gujarati-Fix Thali",
+        "quantity": 2,
+        "deliveryAddress": "456 Maple Street, Cityville",
+        "specialRequest": "Extra spicy",
+        "totalPrice": 300
+    },
+    {
+        "customerName": "Bob Smith",
+        "customerEmail": "bob@example.com",
+        "customerPhone": "1234567890",
+        "orderedDish": "Paneer Butter Masala",
+        "quantity": 1,
+        "deliveryAddress": "789 Oak Avenue, Townsville",
+        "specialRequest": "Less oil",
+        "totalPrice": 200
+    }
+]

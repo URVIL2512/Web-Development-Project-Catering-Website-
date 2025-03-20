@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <email>testuser@example.com</email>
+        <password>password123</password>
+        <phone>1234567890</phone>
+    </user>
+    <user>
+        <email>sampleuser@example.com</email>
+        <password>pass456</password>
+        <phone>0987654321</phone>
+    </user>
+</users>
+<users>
+    <user>
+        <email>abc123@gmail.com</email>
+        <password>password123</password>
+        <phone>1234567890</phone>
+    </user>
+    <user>
+        <email>xyz456@gmail.com</email>
+        <password>pass456</password>
+        <phone>0987654321</phone>
+    </user>
+</users>

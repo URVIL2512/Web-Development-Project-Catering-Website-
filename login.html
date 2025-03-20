@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <h1>Customer Login</h1>
+        </header>
+        <div class="form-container">
+            <form action="login_process.php" method="post" id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email" required>
+
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="pass" placeholder="Enter Password" required>
+
+                <label for="number">Phone Number:</label>
+                <input type="tel" id="number" name="number" placeholder="Enter Phone Number" required>
+
+                <button type="submit" class="submit-btn" id="login">Login</button>
+            </form>
+
+            <div class="forgot">
+                <p>Forgot Password?</p>
+            </div>
+
+            <div class="other">
+                <p>Don't Have An Account? <a href="sign_up.html">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            var phoneNo = document.getElementById('number').value; 
+            if (!/^\d{10}$/.test(phoneNo)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+    
+            return true;
+        }
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("login").addEventListener("click", function(event) {
+                if (!validateForm()) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Dishes | Pyramid Caterers</title>
+    <link rel="stylesheet" href="dishes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="pyramid.jpg" alt="Pyramid Caterers Logo" class="logo">
+            <h1>Pyramid Caterers</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Our Delicious Dishes</h2>
+            <button onclick="loadRandomDishes()">Load Random Dishes</button>
+            <div class="dish-list" id="dish-list">
+                <!-- Initial dishes loaded here -->
+                <figure class="dish">
+                    <img src="gujaratidish.jpg" alt="Gujarati Dish">
+                    <figcaption>Gujarati Dish - Gujarat - ₹200</figcaption>
+                </figure>
+                <figure class="dish">
+                    <img src="Punjabi_dish.jpg" alt="Punjabi Dish">
+                    <figcaption>Punjabi Dish - Punjab - ₹250</figcaption>
+                </figure>
+                <!-- Add other initial dishes as needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pyramid Caterers. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function loadRandomDishes() {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const dishList = document.getElementById("dish-list");
+                    dishList.innerHTML = ""; // Clear current dishes
+
+                    const dishes = JSON.parse(xhr.responseText);
+                    dishes.forEach(dish => {
+                        const figure = document.createElement("figure");
+                        figure.classList.add("dish");
+
+                        const img = document.createElement("img");
+                        img.src = dish.image;
+                        img.alt = dish.name;
+                        figure.appendChild(img);
+
+                        const figcaption = document.createElement("figcaption");
+                        figcaption.textContent = `${dish.name} - ${dish.state} - ₹${dish.price}`;
+                        figure.appendChild(figcaption);
+
+                        dishList.appendChild(figure);
+                    });
+                }
+            };
+
+            xhr.open("GET", "getRandomDishes.php", true);
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

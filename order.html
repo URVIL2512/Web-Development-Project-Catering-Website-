@@ -1,0 +1,213 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now | Pyramid Caterers</title>
+    <link rel="stylesheet" href="order.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="pyramid.jpg" class="logo" alt="Pyramid Caterers Logo">
+            <h1>Pyramid Caterers</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dishes.html">Delicious Dishes</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="order-now">
+        <div class="container">
+            <h2>Order Your Favorite Dishes</h2>
+            <form action="order.php" method="post" class="order-form" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone_no">Phone Number:</label>
+                <input type="tel" id="phone_no" name="phone_no" required>
+
+                <label for="dish">Select Dish:</label>
+                <select id="dish" name="dish" required style="width: 624px;">
+                    <option value="Gujarati-Fix Thali">Gujarati-Fix Thali</option>
+                    <option value="Paneer Butter Masala">Paneer Butter Masala</option>
+                    <option value="Masala Dosa">Masala Dosa</option>
+                    <option value="Dal-Bati">Dal-Bati</option>
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Place Order</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pyramid Caterers. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phoneNo = document.getElementById('phone_no').value;
+            var quantity = document.getElementById('quantity').value;
+            var address = document.getElementById('address').value;
+
+            // Validate Name
+            if (!/^[a-zA-Z\s]+$/.test(name)) {
+                alert("Please enter a valid name (letters and spaces only).");
+                return false;
+            }
+
+            // Validate Email
+            if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Validate Phone Number
+            if (!/^\d{10}$/.test(phoneNo)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+
+            // Validate Quantity
+            if (quantity < 1) {
+                alert("Please enter a valid quantity (minimum 1).");
+                return false;
+            }
+
+            // Validate Address
+            if (address.trim() === "") {
+                alert("Please enter a delivery address.");
+                return false;
+            }
+
+            alert("Order successfully placed!");
+            return true;
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now | Pyramid Caterers</title>
+    <link rel="stylesheet" href="order.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="pyramid.jpg" class="logo" alt="Pyramid Caterers Logo">
+            <h1>Pyramid Caterers</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dishes.html">Delicious Dishes</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="order-now">
+        <div class="container">
+            <h2>Order Your Favorite Dishes</h2>
+            <form action="order.php" method="post" class="order-form" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone_no">Phone Number:</label>
+                <input type="tel" id="phone_no" name="phone_no" required>
+
+                <label for="dish">Select Dish:</label>
+                <select id="dish" name="dish" required>
+                    <option value="Gujarati-Fix Thali">Gujarati-Fix Thali</option>
+                    <option value="Paneer Butter Masala">Paneer Butter Masala</option>
+                    <option value="Masala Dosa">Masala Dosa</option>
+                    <option value="Dal-Bati">Dal-Bati</option>
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Place Order</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="order-history">
+        <div class="container">
+            <h2>Order History</h2>
+            <div id="order-list"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pyramid Caterers. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fetch and display orders from orders.json
+        fetch('orders.json')
+            .then(response => response.json())
+            .then(data => {
+                const orderList = document.getElementById('order-list');
+                data.forEach(order => {
+                    const orderItem = document.createElement('div');
+                    orderItem.classList.add('order-item');
+                    orderItem.innerHTML = `
+                        <p><strong>Name:</strong> ${order.customerName}</p>
+                        <p><strong>Email:</strong> ${order.customerEmail}</p>
+                        <p><strong>Phone:</strong> ${order.customerPhone}</p>
+                        <p><strong>Dish:</strong> ${order.orderedDish}</p>
+                        <p><strong>Quantity:</strong> ${order.quantity}</p>
+                        <p><strong>Address:</strong> ${order.deliveryAddress}</p>
+                        <p><strong>Special Request:</strong> ${order.specialRequest}</p>
+                        <p><strong>Total Price:</strong> $${order.totalPrice}</p>
+                        <hr>`;
+                    orderList.appendChild(orderItem);
+                });
+            })
+            .catch(error => console.error("Error loading JSON:", error));
+    </script>
+</body>
+
+</html>

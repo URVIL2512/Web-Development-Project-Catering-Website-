@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: 'arial';
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #003366; 
+  color: #fff;
+  padding: 20px 0; /* top and botton of header*/
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /*20px left-right*/
+}
+
+h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+.navbar {
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0; /*20px top, 0 to the bottom-right*/
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+  
+}
+
+.navbar ul li a:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+.logo{
+  position: absolute;
+  height: auto;
+  top: 0px;
+  left: 0px;
+  width: 135px;
+}
+
+.main {
+  background: url("backgroung.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.main-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.main h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.main p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #ff6600; 
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #e65c00;
+}
+
+.Dishes {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.dish-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.Dishes {
+  flex: 1 1 calc(25% - 20px);
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* .Dishes:hover {
+  transform: translateY(-10px);
+} */
+
+.Dishes img {
+  width: 100%;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.Dishes h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.popular-dishes {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+}
+
+.popular-dishes h2 {
+  text-align: center;
+  color: #003366;
+  font-family: 'Arial';
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.dish-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.dish-table th, .dish-table td {
+  border: 4px solid #e2e7e2;
+  padding: 12px;
+  text-align: center;
+}
+
+.dish-table th {
+  background-color: #003366;
+  color: white;
+  /* background-color: #f2f2f2; */
+  font-weight: bold;
+}
+
+.dish-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.dish-table tr:hover {
+  background-color: #e9e9e9;
+}
+
+
+footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
